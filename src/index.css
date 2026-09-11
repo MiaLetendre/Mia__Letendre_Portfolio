@@ -1,11 +1,22 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "SOCOND";
+  src: url("../fonts/sosonormal/SOCOND__.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @theme {
-  --font-poppins: "Poppins", sans-serif;
-  --font-work: "Work Sans", sans-serif;
-
+  --font-sosonormal: "SOCOND", sans-serif;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-raw-sienna: #b85e00;
+  --color-pale-burnt-lake: #730f1f;
+  --color-arcane-violet: #9c52f2;
   --color-neo-brutalism-blue: #2b77e7;
 
   --shadow-card: 0px 10px 35px -4px rgba(67, 83, 255, 0.15),
@@ -18,7 +29,7 @@
 }
 
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: "SOCOND", sans-serif;
 }
 
 body:has(.card[data-color="blue"]:hover) {
@@ -75,7 +86,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .info-box {
-    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl pt-4 pb-12 px-8;
   }
 
   .neo-btn {
@@ -87,7 +98,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .cta-text {
-    @apply text-black-500 font-extrabold flex-1 text-3xl max-md:text-center;
+    @apply text-black font-extrabold flex-1 text-3xl max-md:text-center;
   }
 }
 

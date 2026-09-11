@@ -1,19 +1,22 @@
 import React from 'react'
+import {Route, BrowserRouter as Router, Routes} from 'react-router-dom'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
-  <html>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="/src/style.css" rel="stylesheet" />
-    </head>
-    <body>
-    <h1 class="text-3xl font-bold underline">
-      poop town fuck you up
-    </h1>
-    </body>
-  </html>
+  <main classname = "App">
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path = "/" element = {'Home'}/>
+        <Route path = "/about" element = {'About'}/>
+        <Route path = "/projects" element = {'Projects'}/>
+        <Route path = "/proficiencies" element = {'Proficiencies'}/>
+        <Route path = "/contact" element = {'Contact'}/>
+      </Routes>
+    </Router>
+    
+  </main>
   )
 }
 
